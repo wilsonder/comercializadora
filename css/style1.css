@@ -12,13 +12,12 @@ body {
     url('fonts/icomoon.svg?tc7q2y#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: block;  
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -427,8 +426,6 @@ hr{
   display: none;
 }
 
-footer{
-}
 }
 @media only screen and (max-width: 991px) { 
 .ocul{
@@ -448,7 +445,7 @@ footer{
 .ctn-form{
     width: 80%;
     padding: 40px;
-    background #eeeeee;
+    background: #eeeeee;
 }
 
 .logo{

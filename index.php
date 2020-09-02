@@ -1,3 +1,11 @@
+<?php
+require_once('Models/inventarioGS.php');
+require_once('Models/crud.php');
+$crud= new CRUD();
+$libro=new inventario();
+
+$lista=$crud->mostrar();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -197,69 +205,57 @@
             <div class="tab-pane fade" id="productos" role="tabpanel" aria-labelledby="pills-pozo-tab">
                 <!-- //////////////////////////////////////////////////////////// -->
                 <div class=" prod row col-12">
-                    <h2 style="margin: 20px auto; font-weight: bold; font-size: 40px" class="col-12" id="texun"><span style="color:#20BA38;  text-shadow: 2px 2px 4px white; ">NUESTROS</span> <span style="color: #fff; text-shadow: 2px 2px 4px #20BA38;">PRODUCTOS</span></h2>
+                    <h2 style="margin: 6% auto; font-weight: bold; font-size: 40px" class="col-12" id="texun"><span style="color:#20BA38;  text-shadow: 2px 2px 4px white; ">NUESTROS</span> <span style="color: #fff; text-shadow: 2px 2px 4px #20BA38;">PRODUCTOS</span></h2>
+                    <?php foreach ($lista as $prod) { ?>
                     <div class="col-sm-4 col-md-4 col-lg-2 cap1">
                         <div class="cap2">
-                            <b id="texun">AGRICULTURA</b><br>
-                            <p id="texun"><img src="img/7.jpg">
+                            <b id="texun"><?php echo $prod->getId() ?></b><br>
+                            <p id="texun">
+                                <div style="background: rgba(255,255,255,0.7); width: 80%; margin: auto; padding: 10%;"><img src="<?php echo $prod->getImg() ?>"></div>
                                 <br><br>
-                                Ambiente donde encontrara
-                                los productos del
-                                aprovechamiento de las
-                                riquezas del suelo
+                                <?php echo $prod->getDescripcion() ?>
                                 <br>
+                                Cantidad: <?php echo $prod->getCantidad() ?>
+                                <br>
+                                Precio: <?php echo $prod->getPrecio() ?>
                             </p>
-                            <button id="butcap">Ver...</button>
                         </div>
                     </div>
-                    <div class="col-sm-4  col-md-4 col-lg-2 cap1">
-                        <div class="cap2">
-                            <b id="texun">CUNICULTURA</b><br>
-                            <p id="texun"><img src="img/cu.jpg">
-                                <br><br>
-                                Ambiente donde encontrara la venta de conejos
-                                <br><br>
-                            </p>
-                            <button id="butcap">Ver...</button>
-                        </div>
-                    </div>
-                    <div class="col-sm-4  col-md-4 col-lg-2 cap1">
-                        <div class="cap2">
-                            <b id="texun">CAPRICULTURA</b><br>
-                            <p id="texun"><img src="img/3.jpg">
-                                <br><br>
-                                Ambiente donde encontrara la venta de caprinos
-                                <br><br>
-                            </p>
-                            <button id="butcap">Ver...</button>
-                        </div>
-                    </div>
-                    <div class="col-sm-4  col-md-4 col-lg-2 cap1">
-                        <div class="cap2">
-                            <b id="texun">AVICULTURA</b><br>
-                            <p id="texun"><img src="img/avi.jpg">
-                                <br><br>
-                                Ambiente donde encontrara la venta de huevos y gallinas.
-                                <br><br>
-                            </p>
-                            <button id="butcap">Ver...</button>
-                        </div>
-                    </div>
+                   <?php }?>
                 </div>
             </div>
+
+                <!-- //////////////////////////////////////////////////////////// -->
             <div class="tab-pane fade " id="nos" role="tabpanel" aria-labelledby="pills-pozo-tab">
-                <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.426576969296!2d-74.21781468590983!3d4.6957090430099715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9d58cf6e291b%3A0x8946ec678fcf04b4!2sSENA%20MOSQUERA%20(CBA)!5e0!3m2!1ses-419!2sco!4v1594625346432!5m2!1ses-419!2sco" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <div class="prod row col-12">
+                    <h2 style="margin: 6% auto; font-weight: bold; font-size: 40px" class="col-12" id="texun"><span style="color:#20BA38;  text-shadow: 2px 2px 4px white; ">SENA</span></h2>
+                    <div class="row">
+                        <div class="col-4" style="padding-top: 6%;">
+                            El SENA, es un establecimiento público del orden nacional, <br>con personería jurídica, patrimonio propio e independiente, <br>y autonomía administrativa; adscrito al Ministerio del Trabajo,<br> de Colombia.
+                        </div>
+                        <img src="img/entrada.png" class="col-6">
+                    </div>
+                    <div class="row">
+                        <h3 class="col-6">Mision</h3>
+                        <div class="col-6" style="padding-top: 6%;">
+                            El SENA, es un establecimiento público del orden nacional, <br>con personería jurídica, patrimonio propio e independiente, <br>y autonomía administrativa; adscrito al Ministerio del Trabajo,<br> de Colombia.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6" style="padding-top: 6%;">
+                            El SENA, es un establecimiento público del orden nacional, <br>con personería jurídica, patrimonio propio e independiente, <br>y autonomía administrativa; adscrito al Ministerio del Trabajo,<br> de Colombia.
+                        </div>
+                        <h3 class="col-6">Vision</h3>
+                    </div>
+
+                    <br>
                 </div>
             </div>
 
             <div class="tab-pane fade " id="encu" role="tabpanel" aria-labelledby="pills-pozo-tab">
-                <div class="row col-12" id="he">
-                        
-                        <div class="col-12">
-                             <img width="1024 px" class="mantenimiento" src="https://www.puntomega.es/wp-content/uploads/mantenimiento.png">
-                        </div>
-                    </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.426576969296!2d-74.21781468590983!3d4.6957090430099715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9d58cf6e291b%3A0x8946ec678fcf04b4!2sSENA%20MOSQUERA%20(CBA)!5e0!3m2!1ses-419!2sco!4v1594625346432!5m2!1ses-419!2sco" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
             </div>
         </div>
     </div>

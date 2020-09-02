@@ -84,6 +84,26 @@ class CRUD{
 		}
 
 	}
+
+	public function mostrar(){
+	$db=con::conexion();
+	$listaLibros=[];
+	$select=$db->query('SELECT * FROM tb_inventario');
+
+	foreach($select->fetchAll() as $libro){
+		$myLibro= new inventario();
+		$myLibro->setId($libro['inv_id']);
+		$myLibro->setId_area($libro['inv_area_id']);
+		$myLibro->setDescripcion($libro['inv_descripcion']);
+		$myLibro->setCantidad($libro['inv_cantidad']);
+		$myLibro->setCosto($libro['inv_costo']);
+		$myLibro->setPrecio($libro['inv_precio']);
+		$myLibro->setImg($libro['inv_img']);
+		$listaLibros[]=$myLibro;
+
+	}
+	return $listaLibros;
+	}
 }
  ?>
 	
