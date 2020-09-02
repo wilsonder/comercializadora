@@ -1,7 +1,8 @@
 $(document).ready(function(){
-    $id        = $("#id_solicitud");
-    $area      = $("#area"); 
-    $productos = $("#productos");
+   
+     $id        = $("#id_solicitud");
+    $area      = $("#narea"); 
+    $productos = $("#producnt");
     $solictar  = $("#solicitar");
     $fecha     = $("#fecha_solicitud");
     $cantidad  = $("#cantidad");
@@ -25,7 +26,7 @@ $(document).ready(function(){
             success: function(response){ // al insertar datos exitosamente el succes muestra la confirmacion y limpia los campos
                 var opcion = '';
 
-                opcion += '<select class="form-control input-form" id="producto" name="producto">';
+                opcion += '<select class="form-control input-form" id="lo_producto" name="lo_producto">';
                 for(var i in response){
                     opcion += '<option value="'+ response[i].inv_id +'">'+ response[i].inv_descripcion +'</option>';
                 }
@@ -49,7 +50,7 @@ $(document).ready(function(){
                 'id'          : $id.val(),
                 'fecha'       : $fecha.val(),
                 'area'        : $area.val(),
-                'descripcion' : $("#producto").val(),
+                'descripcion' : $("#lo_producto").val(),
                 'cantidad'    : $cantidad.val(),
                 'unidad'      : $unidad.val(),
                 'area_sol'    : $area_sol.val()
@@ -73,4 +74,5 @@ $(document).ready(function(){
             }
         });
     });
+
 });

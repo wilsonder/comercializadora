@@ -18,9 +18,13 @@
           if ($_POST['usuario'] != "" && $_POST['contrasena'] != "") {
                
                $se=$crud->login($_POST['usuario'],$_POST['contrasena']);
-               if ($se->getUsu_docu()==$_POST['usuario'] && $se->getUsu_contra()==$_POST['contrasena']) {
-                         session_start();
-                         $_SESSION['id']=$se->getUsu_docu();
+               if ($se->getUsu_docu()==$_POST['usuario'] && $se->getUsu_contra()==$_POST['contrasena'] && $se->getUsu_area()== 5) {
+                     session_start();
+                     $_SESSION['id']=$se->getUsu_docu();
+                     header('location:../Views/tienda.php');
+               }else if ($se->getUsu_docu()==$_POST['usuario'] && $se->getUsu_contra()==$_POST['contrasena'] && $se->getUsu_area()!= 5) {
+                     session_start();
+                     $_SESSION['id']=$se->getUsu_docu();
                      header('location:../Views/perfil.php');
                }else{ ?>
                     <div class="modal-dialog" role="document">

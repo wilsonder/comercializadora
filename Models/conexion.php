@@ -8,7 +8,7 @@ class con
     public static function conexion(){
         $loca='localhost';
         $user='root';
-        $pass='12345678';
+        $pass='';
         $db='comersena';
         $odbc='mysql:local=$local;dbname='.$db;
 

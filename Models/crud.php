@@ -18,6 +18,7 @@ class CRUD{
 
 			$datos->setUsu_contra($sol['usu_contra']);
 			$datos->setUsu_docu($sol['usu_docu']);
+			$datos->setUsu_area($sol['usu_area_id']);
 
 		return $datos;
 	}
@@ -50,6 +51,38 @@ class CRUD{
 		$sol=$sql->fetchAll();
 
 		return $sol;
+	}
+
+	public function contra($Gs){
+		$db=con::conexion();
+
+		try {
+			$sql=$db->prepare("UPDATE `tb_usuario` SET `usu_contra` = :contra WHERE `usu_docu` = :id");
+
+			$sql->bindValue("id",$Gs->getUsu_docu());
+			$sql->bindValue("contra",$Gs->getUsu_contra());
+			
+			$sql->execute();
+		} catch (Exception $e) {
+			echo $e;
+		}
+
+	}
+
+	public function foto($Gs){
+		$db=con::conexion();
+
+		try {
+			$sql=$db->prepare("UPDATE `tb_usuario` SET `usu_foto` = :foto WHERE `usu_docu` = :id");
+
+			$sql->bindValue("id",$Gs->getUsu_docu());
+			$sql->bindValue("foto",$Gs->getUsu_foto());
+			
+			$sql->execute();
+		} catch (Exception $e) {
+			echo $e;
+		}
+
 	}
 }
  ?>

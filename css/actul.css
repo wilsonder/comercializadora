@@ -1,0 +1,327 @@
+.container-logo{
+    -ms-flex:0 0 8.333333%;
+    flex:0 0 8.333333%;
+    max-width:5.333333%;
+    background-color: #20ba38;
+}
+
+.logo{
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.container-header{
+    background-color: #20ba38;
+}
+
+.title{
+    color: white;
+    margin-top: 10px;
+    text-align: left;
+    margin-right: 15px;
+}
+
+.container_name{
+    -ms-flex:0 0 72%;
+    flex:0 0 72%;
+    max-width:72%;
+}
+
+
+
+.user_name{
+    text-align: right;
+    margin-top: 15px;
+}
+
+.container-user{
+    -ms-flex:0 0 5.333333%;
+    flex:0 0 5.333333%;
+    max-width:5.333333%;
+}
+
+.user{
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+#user2{
+
+    
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 170px;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.img3{
+
+   
+    width: 30%;
+    height: 100%;
+    margin-top: 10%;
+    
+}
+
+.cambiar{
+
+     
+    margin-top: 20%;
+}
+
+.cambiar2{
+
+    
+    margin-top: 20%;
+    margin-left: 8%;
+}
+
+
+
+.container-icon{
+    -ms-flex:0 0 3.333333%;
+    flex:0 0 3.333333%;
+    max-width:3.333333%;
+}
+
+.icons{
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.container_main{
+    background-color: #eee;
+}
+
+.menu{
+    background-color: #20ba38;
+}
+
+.title-menu{
+    color: white;
+    text-align: center;
+}
+
+.container-title{
+    height: 60px;
+}
+
+.container-button{
+    background-color: #65ee68;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.btn-menu{
+    border: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 50px;
+    color: black;
+    background-color: #20ba38;
+}
+
+.icon-button{
+    margin-right: 10px;
+}
+
+.menu-footer{
+    height: 30px;
+}
+
+.label-text{
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.container-form{
+    margin: 0 auto;
+}
+
+.row-form{
+    margin-bottom: 10px;
+}
+
+.row-form2{
+    margin-top: 170px;
+}
+
+.row-form3{
+    margin-top: 120px;
+}
+
+
+
+.input-form{
+    border-radius: 20px;
+}
+
+.input-form2{
+    border-radius: 30px;
+    text-align: center;
+}
+
+.margin-form{
+    margin-top:30px;
+}
+
+.btn-form{
+    background-color: gray;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn-end{
+    background-color: gray;
+    color: white;
+}
+.btn-end2{
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn-end3{
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+}
+
+.img-form{
+    width: 60px;
+    height: 60px;
+}
+
+.img-form2{
+    width: 60px;
+    height: 60px;
+}
+
+.img-footer{
+    width: 90px;
+    height: 90px;
+}
+
+.font-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+    border-right: 1px solid white;
+}
+
+.container-footer{
+    background-color: #65ee68;
+    width: 70%;
+    margin:0 auto;
+}
+
+.img-redes{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.center-img{
+    margin: 0 auto;
+}
+
+  .buscar{
+
+    
+    width: 40%;
+    margin-left: 75%;
+
+  }
+
+  .buscar2{
+
+   
+    width: 60%;
+    height: 50%;
+    margin-left: 30%;
+
+  }
+
+  #cabra{
+
+    width: 100%;
+    height: 200px;
+  }
+
+input[type="password"]{
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    border:2px solid gray;
+}
+
+input[type="file"]{
+    padding: 10px;
+    border-radius: 20px;
+}
+
+input[type="submit"],button{
+    border-radius: 20px;
+}
+
+/*/////////////////////////////////////////////*/
+footer {
+    padding: 2%;
+    background: #20BA38;
+}
+
+.fot {
+    margin: auto;
+    text-align: center;
+}
+
+.fot>h1 {
+    font-size: 40px;
+    color: white;
+}
+
+.fot>h4 {
+    font-size: 20px;
+    color: white;
+}
+
+.fot>img {
+    width: 100px;
+}
+
+.conf {
+    margin: auto;
+    padding: 4%;
+    text-align: center;
+    background: #65ee68;
+    color: white;
+
+}
+
+hr {
+    width: 400px;
+    border: 1px solid white;
+}
+
+.red {
+    width: 50px;
+    padding: 5px;
+}
+
+.end {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
